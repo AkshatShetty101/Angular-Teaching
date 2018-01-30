@@ -13,10 +13,10 @@
 <!-- Stage 2 -->
 <div class="row">
     <div class="col-6">
-      <app-items></app-items>
+      <app-items (lb)="loadbook($event)" ></app-items>
     </div>
     <div class="col-6">
-        <app-details [data]="bookDetails" *ngIf="bookDetails;else infoText"></app-details>
+        <app-details [data]="bookDetails" (removeBook)="clear()" *ngIf="bookDetails;else infoText"></app-details>
         <ng-template #infoText>
           <p class="mt-5">Please select a book!!!</p>
         </ng-template>

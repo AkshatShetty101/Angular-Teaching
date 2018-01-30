@@ -8,6 +8,7 @@ import { ItemsComponent } from './home/items/items.component';
 import { DetailsComponent } from './home/details/details.component';
 import { BookComponent } from './home/items/book/book.component';
 import { HomeComponent } from './home/home.component';
+import { BookService } from './shared/book.service';
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
