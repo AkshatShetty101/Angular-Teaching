@@ -9,6 +9,10 @@ import { DetailsComponent } from './home/details/details.component';
 import { BookComponent } from './home/items/book/book.component';
 import { HomeComponent } from './home/home.component';
 import { BookService } from './shared/book.service';
+import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
+import { AddPageComponent } from './add-page/add-page.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,10 +22,14 @@ import { BookService } from './shared/book.service';
     ItemsComponent,
     DetailsComponent,
     BookComponent,
-    HomeComponent
+    HomeComponent,
+    BasicHighlightDirective,
+    BetterHighlightDirective,
+    AddPageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]
