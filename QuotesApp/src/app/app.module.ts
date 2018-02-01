@@ -13,7 +13,8 @@ import { BasicHighlightDirective } from './basic-highlight/basic-highlight.direc
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 import { AddPageComponent } from './add-page/add-page.component';
 import { FormsModule } from '@angular/forms';
-
+import {ROUTES} from './app.routing';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 
 @NgModule({
   declarations: [
@@ -25,11 +26,13 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
-    AddPageComponent
+    AddPageComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ROUTES
   ],
   providers: [BookService],
   bootstrap: [AppComponent]
