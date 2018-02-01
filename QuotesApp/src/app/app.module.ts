@@ -15,6 +15,8 @@ import { AddPageComponent } from './add-page/add-page.component';
 import { FormsModule } from '@angular/forms';
 import { ObservablesComponent } from './observables/observables.component';
 
+import {ROUTES} from './app.routing';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { ObservablesComponent } from './observables/observables.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ROUTES
   ],
   providers: [BookService],
   bootstrap: [AppComponent]

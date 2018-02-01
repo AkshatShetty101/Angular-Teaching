@@ -11,3 +11,10 @@
       <p>Two Way Binded Data:{{ name }}</p>
   </div>
 </div>
+<a [routerLink]="['/add_page', 'adhrit', 'from_routerLink']">Reload Page - routerlink</a><br><br>
+<button (click)="routeTo()">Reload Page - router.navigate</button><br>
+<h4>User - <span [innerHTML]="user"></span></h4>
+<h4>Data - <span [innerHTML]="data"></span></h4>
+<h4>Favourite Number - <span [innerHTML]="num"></span></h4>
+<div class="space" ></div>
+<a name="down_here" [innerHTML]="'Anchor tag with name '+frag"></a>

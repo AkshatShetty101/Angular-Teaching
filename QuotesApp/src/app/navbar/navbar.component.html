@@ -5,9 +5,14 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" href="#">Home</a>
-      <a class="nav-item nav-link" href="#">Add Book</a>
-      <a class="nav-item nav-link" href="#">Remove Book</a>
+      <!-- <a class="nav-item nav-link" href="home">Home(href)</a> -->
+      <!-- <a class="nav-item nav-link" routerLink="home">Home(static)</a> -->
+      <!-- <li><a class="nav-item nav-link" href="home">Home(dynamic)</a></li> -->
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a class="nav-item nav-link" routerLink="">Home(static)</a></li>
+      <!-- <li routerLinkActive="active"><a class="nav-item nav-link" [routerLink]="[url]">Home(dynamic)</a></li> -->
+      <li routerLinkActive="active"><a class="nav-item nav-link" [routerLink]="['/add_page', 'adhrit', 'from_nav']" [fragment]="'down_here'">Routing Demo</a></li>
+      <li routerLinkActive="active"><a class="nav-item nav-link" [routerLink]="['/add_book']">Add Book</a></li>
+      <li routerLinkActive="active"><a class="nav-item nav-link" [routerLink]="['/remove_book']">Remove Book</a></li>
     </div>
   </div>
 </nav>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-add-page',
@@ -7,13 +8,57 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPageComponent implements OnInit {
   name = '';
+<<<<<<< HEAD
+  user = "";
+  data = "";
+  num = "";
+  frag = "";
+
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
+
+  ngOnInit() {
+    this.user = this.route.snapshot.params['user'];
+    this.data = this.route.snapshot.params['data'];
+    this.num = this.route.snapshot.queryParams['num'];
+    this.frag = this.route.snapshot.fragment;
+    
+    this.route.params
+      .subscribe(
+        (params) => {
+          this.user = params['user'],
+          this.data = params['data']
+        }
+      );
+    
+    this.route.queryParams
+    .subscribe(
+      (params) => {
+        this.num = params['num']
+      }
+    );
+    this.route.fragment
+    .subscribe(
+      (fragments) => {
+        this.frag = fragments;
+      }
+    );
+  }
+=======
   constructor() { }
 
   ngOnInit() {}
+>>>>>>> be59348d5e293b6de88b6101763e78ede0f28e9a
 
   change() {
     if (this.name.length > 7) {
       this.name = 'Shit!';
     }
+  }
+
+  routeTo(){
+    this.router.navigate(['/add_page', 'adhrit', 'from.navigate'], {queryParams:{num:1}, relativeTo:this.route, fragment:'down_here'});
   }
 }
