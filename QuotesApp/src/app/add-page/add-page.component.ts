@@ -8,7 +8,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class AddPageComponent implements OnInit {
   name = '';
-<<<<<<< HEAD
   user = "";
   data = "";
   num = "";
@@ -46,11 +45,6 @@ export class AddPageComponent implements OnInit {
       }
     );
   }
-=======
-  constructor() { }
-
-  ngOnInit() {}
->>>>>>> be59348d5e293b6de88b6101763e78ede0f28e9a
 
   change() {
     if (this.name.length > 7) {

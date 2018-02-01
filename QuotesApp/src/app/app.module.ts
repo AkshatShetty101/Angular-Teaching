@@ -29,7 +29,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BasicHighlightDirective,
     BetterHighlightDirective,
     AddPageComponent,
-    ObservablesComponent
+    ObservablesComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
