@@ -1,4 +1,4 @@
-import { Component,Input,Output, OnInit,EventEmitter } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-book',
@@ -27,16 +27,16 @@ export class BookComponent implements OnInit {
 
   // Stage 2
   // Allowing the variable to be accessed from outside
-  @Input('i') index:number=0;
-  @Input() data:{name:string;author:string}={name:"default",author:"dafault"};
+  @Input('i') index: number = 0;
+  @Input() data: { name: string; author: string } = { name: "default", author: "dafault" };
   //Emitting custom event
-  @Output() loadBook = new EventEmitter<{name:string}>();
+  @Output() loadBook = new EventEmitter<{ name: string }>();
   constructor() {
   }
   ngOnInit() {
   }
-  loadDetails(){
+  loadDetails() {
     console.log('Ready to load book details');
-    this.loadBook.emit({name:this.data.name});
+    this.loadBook.emit({ name: this.data.name });
   }
 }

@@ -1,0 +1,30 @@
+.col {
+    width: 50vw;
+    text-align: center;
+    padding-top: 20vh;
+}
+.row {
+    height: 40vh;
+}
+
+/* span {
+    background-color: black;
+    color: white;
+
+} */
+
+#A{
+    background: lightcoral;
+}
+
+#B{
+    background: lightskyblue;
+}
+
+#C{
+    background: lightgreen;
+}
+
+#D{
+    background: lightgoldenrodyellow;
+}

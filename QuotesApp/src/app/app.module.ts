@@ -15,7 +15,7 @@ import { AddPageComponent } from './add-page/add-page.component';
 import { FormsModule } from '@angular/forms';
 import { ObservablesComponent } from './observables/observables.component';
 
-import {ROUTES} from './app.routing';
+import { ROUTES } from './app.routing';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 
 @NgModule({
@@ -29,7 +29,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BasicHighlightDirective,
     BetterHighlightDirective,
     AddPageComponent,
-    ObservablesComponent
+    ObservablesComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -19,19 +19,19 @@ export class HomeComponent implements OnInit {
 
   // Stage 1
 
-  bookDetails:{ Book};
+  bookDetails: { Book };
   //Subscribing to the change
 
-  constructor(private bookservice:BookService) { }
+  constructor(private bookservice: BookService) { }
 
   ngOnInit() {
   }
 
-  loadbook(data:string){
+  loadbook(data: string) {
     this.bookDetails = this.bookservice.getBook(data);
   }
 
-  clear(){
+  clear() {
     console.log("Reached Here!")
     this.bookDetails = null;
   }

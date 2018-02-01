@@ -1,3 +1,4 @@
+import { ObservablesComponent } from './observables/observables.component';
 import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AddPageComponent } from './add-page/add-page.component';
@@ -5,6 +6,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
+    { path: 'observables', component: ObservablesComponent },
     {
         path: 'add_page', component: AddPageComponent, children: [
             { path: ':user', component: AddPageComponent },
