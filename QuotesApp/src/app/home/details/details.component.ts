@@ -18,7 +18,7 @@ export class DetailsComponent implements OnInit, OnChanges, OnDestroy, DoCheck, 
   @Input() data: { name: string, author: string, desc: string, imgPath: string };
   @ViewChild('heading') head: ElementRef;
   constructor() {
-    console.log("Constructor Called!");
+    console.log('Constructor Called!');
   }
 
   close() {
@@ -28,37 +28,37 @@ export class DetailsComponent implements OnInit, OnChanges, OnDestroy, DoCheck, 
 
   // Implementing all lifehooks
   ngOnInit() {
-    console.log("Init Called!");
+    console.log('Init Called!');
     console.log('Text content:' + this.head.nativeElement.textContent);
   }
 
   ngOnChanges() {
-    console.log("Changes called!");
+    console.log('Changes called!');
   }
 
   ngDoCheck() {
-    console.log("DoCheck called!");
+    console.log('DoCheck called!');
   }
 
   ngOnDestroy() {
-    console.log("Destroy called!")
+    console.log('Destroy called!');
   }
 
   ngAfterContentInit() {
-    console.log("AfterContentInit called!")
+    console.log('AfterContentInit called!');
   }
 
   ngAfterViewInit() {
-    console.log("AfterViewInit called!")
+    console.log('AfterViewInit called!');
     console.log('Text content:' + this.head.nativeElement.textContent);
   }
 
   ngAfterContentChecked() {
-    console.log("AfterContentChecked called!")
+    console.log('AfterContentChecked called!');
   }
 
   ngAfterViewChecked() {
-    console.log("AfterViewChecked called!")
+    console.log('AfterViewChecked called!');
   }
 
 }
