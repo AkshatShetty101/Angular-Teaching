@@ -1,7 +1,7 @@
-import { Component, OnInit, EventEmitter,Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Mockup } from './items.mockup';
-import { Book } from '../../shared/book.model';
-import { BookService } from '../../shared/book.service';
+import { Book } from '../../shared/models/book.model';
+import { BookService } from '../../shared/services/book.service';
 @Component({
   selector: 'app-items',
   templateUrl: './items.component.html',

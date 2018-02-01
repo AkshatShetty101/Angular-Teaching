@@ -6,15 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-page.component.css']
 })
 export class AddPageComponent implements OnInit {
-  name='';
+  name = '';
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  change(){
-    if(this.name.length>7){
-      this.name="Shit!"
+  change() {
+    if (this.name.length > 7) {
+      this.name = 'Shit!';
     }
   }
 }

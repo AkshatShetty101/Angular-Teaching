@@ -8,7 +8,7 @@ import { ItemsComponent } from './home/items/items.component';
 import { DetailsComponent } from './home/details/details.component';
 import { BookComponent } from './home/items/book/book.component';
 import { HomeComponent } from './home/home.component';
-import { BookService } from './shared/book.service';
+import { BookService } from './shared/services/book.service';
 import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 import { AddPageComponent } from './add-page/add-page.component';
