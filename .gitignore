@@ -57,3 +57,10 @@ typings/
 # dotenv environment variables file
 .env
 
+# Demo Server
+/Server/*
+
+# Others
+.DS_Store
+package-lock.json
+.vscode/*
