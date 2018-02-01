@@ -13,6 +13,7 @@ import { BasicHighlightDirective } from './basic-highlight/basic-highlight.direc
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 import { AddPageComponent } from './add-page/add-page.component';
 import { FormsModule } from '@angular/forms';
+import { ObservablesComponent } from './observables/observables.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
-    AddPageComponent
+    AddPageComponent,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
