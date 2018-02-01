@@ -26,9 +26,9 @@ export class ItemsComponent implements OnInit {
   // }
 
   //Stage 2
-  @Output('lb')loadbook = new EventEmitter<string>();
-  itemsList:{name:string,author:string}[];
-  constructor(private bookservice : BookService) { }
+  @Output('lb') loadbook = new EventEmitter<string>();
+  itemsList: { name: string, author: string }[];
+  constructor(private bookservice: BookService) { }
 
   ngOnInit() {
     //Accessing data from service
@@ -36,7 +36,7 @@ export class ItemsComponent implements OnInit {
     console.log(this.itemsList);
   }
 
-  loadIt(data:{name:string}){
+  loadIt(data: { name: string }) {
     console.log(data);
     this.loadbook.emit(data.name);
   }

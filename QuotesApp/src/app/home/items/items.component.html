@@ -35,16 +35,15 @@
 
 <!-- Stage 3 -->
 <div class="row mt-5">
-    <div class="col-12">
-      <p>Book List</p>
+  <div class="col-12">
+    <p>Book List</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="list-group">
+      <!-- Property binding to variable data from outside the component to load data -->
+      <app-book *ngFor="let book of itemsList;let i=index" [i]="i" [data]="book" (loadBook)="loadIt($event)"></app-book>
     </div>
   </div>
-  <div class="row">
-    <div class="col-12">
-      <div class="list-group">
-        <!-- Property binding to variable data from outside the component to load data -->
-        <app-book *ngFor="let book of itemsList;let i=index" [i]="i" [data]="book" (loadBook)="loadIt($event)"></app-book>
-      </div>
-    </div>
-  </div>
-  
+</div>
