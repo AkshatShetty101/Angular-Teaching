@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Mockup } from './items/items.mockup'
-import { BookService } from '../shared/book.service';
-import { Book } from '../shared/book.model';
+import { Mockup } from './items/items.mockup';
+import { BookService } from '../shared/services/book.service';
+import { Book } from '../shared/models/book.model';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
