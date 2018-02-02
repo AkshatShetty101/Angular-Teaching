@@ -1,4 +1,4 @@
-.col {
+/* .col {
     width: 50vw;
     text-align: center;
     padding-top: 20vh;
@@ -6,12 +6,6 @@
 .row {
     height: 40vh;
 }
-
-/* span {
-    background-color: black;
-    color: white;
-
-} */
 
 #A{
     background: lightcoral;
@@ -27,4 +21,13 @@
 
 #D{
     background: lightgoldenrodyellow;
+} */
+
+.btn {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+.row {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 }

@@ -17,6 +17,7 @@ import { ObservablesComponent } from './observables/observables.component';
 
 import { ROUTES } from './app.routing';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     ROUTES
   ],
   providers: [BookService],
