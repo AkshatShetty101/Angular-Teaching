@@ -1,0 +1,17 @@
+<div class="row mt-5">
+  <div class="col-12">
+    <p>Book List</p>
+  </div>
+</div>
+<div class="row">
+
+  <div class="col-12">
+    <div class="list-group">
+      <app-book 
+        *ngFor="let book of itemList;let i=index"
+        [num]="i"
+        [data]="book" 
+        (loadBook)="loadIt($event)"
+        (click)="bookClicked(book.name)"></app-book>
+    </div>
+  </div>

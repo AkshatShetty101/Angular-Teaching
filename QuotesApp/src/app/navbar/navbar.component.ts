@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConnectService } from '../shared/services/connect.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,8 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   url: any = '/home_dynamic';
+  count: number = 0;
 
-  constructor() { }
+  constructor(private connect: ConnectService) {
+    const conn$ = this.connect.getConnection();
+    conn$.subscribe(
+      (num) => {
+        console.log(num);
+        this.count = num;
+        console.log(this.connect.clickedBooks);
+      }
+    );
+  }
 
   ngOnInit() {}
 }

@@ -1,18 +1,16 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
   <a class="navbar-brand" href="#"><img width="45" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <!-- <a class="nav-item nav-link" href="home">Home(href)</a> -->
-      <!-- <a class="nav-item nav-link" routerLink="home">Home(static)</a> -->
-      <!-- <li><a class="nav-item nav-link" href="home">Home(dynamic)</a></li> -->
-      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a class="nav-item nav-link" routerLink="">Home(static)</a></li>
-      <!-- <li routerLinkActive="active"><a class="nav-item nav-link" [routerLink]="[url]">Home(dynamic)</a></li> -->
-      <li routerLinkActive="active"><a class="nav-item nav-link" [routerLink]="['/add_page', 'adhrit', 'from_nav']" [fragment]="'down_here'">Routing Demo</a></li>
-      <li routerLinkActive="active"><a class="nav-item nav-link" [routerLink]="['/add_book']">Add Book</a></li>
-      <li routerLinkActive="active"><a class="nav-item nav-link" [routerLink]="['/remove_book']">Remove Book</a></li>
+      <li routerLinkActive="active"><a class="nav-item nav-link" routerLink="home" >Home</a>
+      </li>
+      <a class="nav-item nav-link" routerLink="routing_demo">Routing Demo</a>
+      <a class="nav-item nav-link" routerLink="observables">Observables</a>
+      <li><a class="nav-item nav-link">Add Book</a></li>
+      <li><a class="nav-item nav-link">Remove Book</a></li>
       <button type="button" class="btn btn-lg btn-outline-primary"> {{ count }} </button>
     </div>
   </div>

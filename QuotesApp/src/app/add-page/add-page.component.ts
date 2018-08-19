@@ -12,6 +12,7 @@ export class AddPageComponent implements OnInit {
   data = "";
   num = "";
   frag = "";
+  data2="Dynamic"
 
   constructor(
     private router: Router,
@@ -48,7 +49,7 @@ export class AddPageComponent implements OnInit {
 
   change() {
     if (this.name.length > 7) {
-      this.name = 'Shit!';
+      this.name = 'Adhrit';
     }
   }
 

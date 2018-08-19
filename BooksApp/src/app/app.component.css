@@ -1,0 +1,19 @@
+.container{
+    padding: 20px;
+    margin-left: 5vw;
+    flex: 1 0 auto;
+    padding-bottom: 50px;
+    min-height: 100%;
+}
+
+.footer {
+    /* background-color:#bbc2b5de; */
+    padding: 20px;
+    margin-top: -50px;
+}
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 90vw;
+    }
+}

@@ -1,0 +1,18 @@
+<!-- <p>
+ String interpolation: {{ data }}
+</p>
+<p [innerHtml]="data">
+  Property binding
+</p> -->
+<div class="row">
+  <div class="col-6">
+    <app-items (lb)="loadIt($event)" ></app-items>
+  </div>
+  <div class="col-6">
+    <app-details *ngIf="book;else infoText" [b]="book"></app-details>
+  </div>
+  <ng-template #infoText>
+    <p class="mt-5">Please select a book!!!</p>
+  </ng-template>
+</div>
+

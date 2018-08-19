@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { movingCoordinates, clickedCoordinates } from './functions';
 import { Book } from '../shared/models/book.model';
-
+import { ConnectService } from '../shared/services/connect.service';
 
 interface Dictionary { [id: string]: any; }
 
@@ -18,33 +18,40 @@ export class ObservablesComponent implements OnInit {
   books: Book[] = [];
   loadedBooks: boolean;
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private connect: ConnectService
+  ) { }
 
   ngOnInit() { }
 
-  // enter(zone: string) {
-  //   console.log('enter: ' + zone);
+  // enter(zone: any) {
+  //   console.log('$enter: ' + zone.id);
   //   /*
   //     Basic Dictionary Test
   //     this.dict[zone] = zone;
   //   */
-  //   this.dict[zone] = movingCoordinates()
+
+  //   this.dict[zone.id] = movingCoordinates(zone)
   //     .subscribe(
-  //     (coords: any) => {
-  //       console.log(coords);
-  //     });
+  //     (coords: any) => console.log(coords)
+  //     );
   //   console.log(this.dict);
   // }
 
-  // exit(zone: string) {
-  //   console.log('exit: ' + zone);
+  // exit(zone: any) {
+  //   console.log('$exit: ' + zone.id);
   //   /*
   //     Basic Dictionary Test
   //     this.dict[zone] = zone;
   //   */
-  //   this.dict[zone].unsubscribe();
+  //   this.dict[zone.id].unsubscribe();
   //   console.log(this.dict);
   // }
+  bookClicked(name: string) {
+    console.log(name);
+    this.connect.bookClicked(name);
+  }
 
   listAllBooks() {
     this.loadedBooks = false;
@@ -97,7 +104,7 @@ export class ObservablesComponent implements OnInit {
 
   retryRequest() {
     // const req$ = this.http.get('http://localhost:3443/flaky').retry();
-    const req$ = this.http.get('http://localhost:3443/flaky').retryWhen((errs) => errs.delay(5000));
+    const req$ = this.http.get('http://localhost:3443/flaky').retryWhen((errs) => errs.delay(500));
     this.loadedBooks = false;
     req$.subscribe(
       (booksData: any) => {

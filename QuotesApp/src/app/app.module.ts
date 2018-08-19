@@ -18,6 +18,7 @@ import { ObservablesComponent } from './observables/observables.component';
 import { ROUTES } from './app.routing';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 import { HttpClientModule } from '@angular/common/http';
+import { ConnectService } from './shared/services/connect.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,10 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     ROUTES
   ],
-  providers: [BookService],
+  providers: [
+    BookService,
+    ConnectService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

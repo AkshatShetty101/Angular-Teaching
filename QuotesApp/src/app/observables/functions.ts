@@ -1,7 +1,8 @@
 import { Observable } from 'rxjs/Rx';
+import { Subscription } from 'rxjs/Subscription';
 
-export function movingCoordinates() {
-    const obs$ = Observable.fromEvent(document, 'mousemove');
+export function movingCoordinates(element: any) {
+    const obs$ = Observable.fromEvent(element, 'mousemove');
     const XYobs$ = obs$.map(
         (mouse: MouseEvent) => {
             return {
@@ -11,19 +12,19 @@ export function movingCoordinates() {
         }
     )
     // return obs$
-    return XYobs$
+    return XYobs$;
 }
 
-export function clickedCoordinates() {
-    const obs$ = Observable.fromEvent(document, 'clicked');
+export function clickedCoordinates(element: any) {
+    const obs$ = Observable.fromEvent(element, 'clicked');
     const XYobs$ = obs$.map(
         (mouse: MouseEvent) => {
             return {
                 x: mouse.x,
                 y: mouse.y
-            }
+            };
         }
-    )
+    );
     // return obs$
-    return XYobs$
+    return XYobs$;
 }
